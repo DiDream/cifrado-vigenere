@@ -23,7 +23,7 @@ function VigenereDecryption(message, key){
     }
     return decryptedMessage;
 }
-$('#encrypt, #decrypt').on('click',(e)=>{
+$('#encrypt, #decrypt').on('click',function(e){
     var mensaje = $('#message').val().toUpperCase();
     var key = $('#key').val().toUpperCase();
 
