@@ -2,5 +2,30 @@ doctype html
 html
     head
         link(rel="stylesheet", href="css/styles.css")
+        link(
+            rel="stylesheet",
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+        )
+        link(
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        )
         title Cifrado Vigenere
     body
+        article
+            .container
+                input(
+                    type="text"
+                    placeholder="Introduce tu mensaje"
+                )
+                input(
+                    type="text"
+                    placeholder="Introduce tu clave"
+                )
+                .buttons
+                    button CIFRAR
+                    button DESCIFRAR
+                .result Resultado de la operacion
+                .log
+                    span OPERACIONES
+                    i(class="fa fa-file-text-o" aria-hidden="true")
