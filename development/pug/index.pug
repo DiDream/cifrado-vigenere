@@ -39,6 +39,32 @@ html
                 .log
                     span OPERACIONES
                     i(class="fa fa-file-text-o" aria-hidden="true")
+        #modal.open
+            section#box
+                header
+                    h2
+                    input(
+                        type="checkbox",
+                        id="close-modal",
+                        style="display:none"
+                    )
+                    label(for="close-modal")
+                        i(
+                            class="fa fa-times", aria-hidden="true"
+                        )
+                #operations
+                    .operation
+                        .char-box.char-message
+                            span.char A
+                            span.number 0
+                        .char-box.char-key
+                            span.char A
+                            span.number 0
+                        .char-box.char-result
+                            span.char A
+                            span.number 0
+
+
         script(
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
         )

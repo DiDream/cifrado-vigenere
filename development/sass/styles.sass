@@ -62,3 +62,64 @@ article
                 margin-left: 5px
                 font-size: 20px
                 vertical-align: middle
+#modal
+    display: none
+    &.open
+        position: absolute
+        width: 100%
+        height: 100vh
+        background-color: rgba(0,0,0,.6)
+        top: 0px
+        left: 0px
+        display: flex
+        align-items: center
+        justify-content: center
+        #box
+            width: 90%
+            max-width: 500px
+            background-color: #FAFAFA
+            position: relative
+            border-radius: 5px
+            overflow: hidden
+            header
+                width: 100%
+                height: 40px
+                background-color: #DADADA
+                display: flex
+                align-items: center
+                justify-content: center
+                position: relative
+                h2
+                    font-size: 15px
+            label
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                right: 5px
+                font-size: 20px
+                cursor: pointer
+                color: #333
+                .fa-times
+                    display: block
+            #operations
+                overflow-x: auto
+                .operation
+                    width: 80px
+                    height: 300px
+                    .char-box
+                        width: 100%
+                        height: 100px
+                        display: flex
+                        flex-direction: column
+                        align-items: center
+                        justify-content: center
+                        border-bottom: 1px solid #EAEAEA
+                        .char
+                            font-size: 50px
+                            font-weight: 600
+                    .char-message
+                        color: #179D9C
+                    .char-key
+                        color: #9D1717
+                    .char-result
+                        color: #333
