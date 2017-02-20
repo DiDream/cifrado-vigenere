@@ -6,14 +6,16 @@ body
     font-family: "Open Sans", Arial
 article
     width: 90%
-    max-width: 500px
+    max-width: 400px
     background-color: #179D9C
-    margin: 0 auto
     height: 350px
     text-align: center
-    margin-top: 20px
     padding-top: 20px
     border-radius: 5px
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
     .container
         width: 90%
         max-width: 400px
@@ -50,7 +52,7 @@ article
             align-items: center
             color: #333
             font-weight: 600
-        .log
+        #log
             margin-top: 15px
             text-align: right
             font-size: 12px
@@ -72,15 +74,17 @@ article
         top: 0px
         left: 0px
         display: flex
-        align-items: center
+        align-items: flex-start
         justify-content: center
         #box
+            min-width: 200px
             width: 90%
             max-width: 500px
             background-color: #FAFAFA
             position: relative
             border-radius: 5px
             overflow: hidden
+            top: 40px
             header
                 width: 100%
                 height: 40px
@@ -91,11 +95,11 @@ article
                 position: relative
                 h2
                     font-size: 15px
-            label
+            #close-modal
                 position: absolute
                 top: 50%
                 transform: translateY(-50%)
-                right: 5px
+                right: 7px
                 font-size: 20px
                 cursor: pointer
                 color: #333
@@ -103,9 +107,12 @@ article
                     display: block
             #operations
                 overflow-x: auto
+                display: flex
+                flex-wrap: nowrap
                 .operation
-                    width: 80px
+                    min-width: 70px
                     height: 300px
+                    border-right: 1px solid #EAEAEA
                     .char-box
                         width: 100%
                         height: 100px
@@ -113,7 +120,6 @@ article
                         flex-direction: column
                         align-items: center
                         justify-content: center
-                        border-bottom: 1px solid #EAEAEA
                         .char
                             font-size: 50px
                             font-weight: 600
@@ -122,4 +128,5 @@ article
                     .char-key
                         color: #9D1717
                     .char-result
+                        border-top: 1px solid #EAEAEA
                         color: #333

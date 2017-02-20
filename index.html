@@ -19,26 +19,20 @@
           <button id="decrypt">DESCIFRAR</button>
         </div>
         <div class="result">Resultado de la operación</div>
-        <div class="log"><span>OPERACIONES</span><i class="fa fa-file-text-o" aria-hidden="true"></i></div>
+        <div id="log"><span>OPERACIONES</span><i class="fa fa-file-text-o" aria-hidden="true"></i></div>
       </div>
     </article>
-    <div class="open" id="modal">
+    <div id="modal">
       <section id="box">
         <header>
           <h2></h2>
-          <input type="checkbox" id="close-modal" style="display:none;">
-          <label for="close-modal"><i class="fa fa-times" aria-hidden="true"></i></label>
+          <div id="close-modal"><i class="fa fa-times" aria-hidden="true"></i></div>
         </header>
-        <div id="operations">
-          <div class="operation">
-            <div class="char-box char-message"><span class="char">A</span><span class="number">0</span></div>
-            <div class="char-box char-key"><span class="char">A</span><span class="number">0</span></div>
-            <div class="char-box char-result"><span class="char">A</span><span class="number">0</span></div>
-          </div>
-        </div>
+        <div id="operations"></div>
       </section>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/cifrado-vigenere.js"></script>
+    <script src="js/modal.js"></script>
   </body>
 </html>

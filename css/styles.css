@@ -8,14 +8,16 @@ body {
 
 article {
   width: 90%;
-  max-width: 500px;
+  max-width: 400px;
   background-color: #179D9C;
-  margin: 0 auto;
   height: 350px;
   text-align: center;
-  margin-top: 20px;
   padding-top: 20px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
   article .container {
     width: 90%;
     max-width: 400px;
@@ -52,15 +54,15 @@ article {
       align-items: center;
       color: #333;
       font-weight: 600; }
-    article .container .log {
+    article .container #log {
       margin-top: 15px;
       text-align: right;
       font-size: 12px;
       color: #fff;
       cursor: pointer; }
-      article .container .log span {
+      article .container #log span {
         vertical-align: middle; }
-      article .container .log .fa-file-text-o {
+      article .container #log .fa-file-text-o {
         margin-left: 5px;
         font-size: 20px;
         vertical-align: middle; }
@@ -75,15 +77,17 @@ article {
     top: 0px;
     left: 0px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center; }
     #modal.open #box {
+      min-width: 200px;
       width: 90%;
       max-width: 500px;
       background-color: #FAFAFA;
       position: relative;
       border-radius: 5px;
-      overflow: hidden; }
+      overflow: hidden;
+      top: 40px; }
       #modal.open #box header {
         width: 100%;
         height: 40px;
@@ -94,29 +98,31 @@ article {
         position: relative; }
         #modal.open #box header h2 {
           font-size: 15px; }
-      #modal.open #box label {
+      #modal.open #box #close-modal {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: 5px;
+        right: 7px;
         font-size: 20px;
         cursor: pointer;
         color: #333; }
-        #modal.open #box label .fa-times {
+        #modal.open #box #close-modal .fa-times {
           display: block; }
       #modal.open #box #operations {
-        overflow-x: auto; }
+        overflow-x: auto;
+        display: flex;
+        flex-wrap: nowrap; }
         #modal.open #box #operations .operation {
-          width: 80px;
-          height: 300px; }
+          min-width: 70px;
+          height: 300px;
+          border-right: 1px solid #EAEAEA; }
           #modal.open #box #operations .operation .char-box {
             width: 100%;
             height: 100px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            border-bottom: 1px solid #EAEAEA; }
+            justify-content: center; }
             #modal.open #box #operations .operation .char-box .char {
               font-size: 50px;
               font-weight: 600; }
@@ -125,4 +131,5 @@ article {
           #modal.open #box #operations .operation .char-key {
             color: #9D1717; }
           #modal.open #box #operations .operation .char-result {
+            border-top: 1px solid #EAEAEA;
             color: #333; }

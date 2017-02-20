@@ -36,36 +36,22 @@ html
                     button#encrypt CIFRAR
                     button#decrypt DESCIFRAR
                 .result Resultado de la operación
-                .log
+                #log
                     span OPERACIONES
                     i(class="fa fa-file-text-o" aria-hidden="true")
-        #modal.open
+        #modal
             section#box
                 header
                     h2
-                    input(
-                        type="checkbox",
-                        id="close-modal",
-                        style="display:none"
-                    )
-                    label(for="close-modal")
+                    #close-modal
                         i(
                             class="fa fa-times", aria-hidden="true"
                         )
                 #operations
-                    .operation
-                        .char-box.char-message
-                            span.char A
-                            span.number 0
-                        .char-box.char-key
-                            span.char A
-                            span.number 0
-                        .char-box.char-result
-                            span.char A
-                            span.number 0
 
 
         script(
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
         )
         script(src="js/cifrado-vigenere.js")
+        script(src="js/modal.js")
