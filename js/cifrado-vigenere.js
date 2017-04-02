@@ -56,8 +56,8 @@ function VigenereDecryption(message, key){
     return decryptedMessage;
 }
 $('#encrypt, #decrypt').on('click',function(e){
-    var mensaje = $('#message').val().toUpperCase();
-    var key = $('#key').val().toUpperCase();
+    var mensaje = $('#message').val().replace(/\s/g, '').toUpperCase();
+    var key = $('#key').val().replace(/\s/g, '').toUpperCase();
 
     if(mensaje=='') alert('Inserte un mensaje');
     else if (key=='')  alert('Inserte una clave');
